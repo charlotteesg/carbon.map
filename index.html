@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="robots" content="noindex,nofollow">
-    <title>Charlotte's Carbon Map</title>
+    <title>Charlotte's Carbon Map | 綠領實務與職涯隨筆</title>
     
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://unpkg.com/react@18/umd/react.production.min.js" crossorigin></script>
@@ -12,19 +12,10 @@
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
     <style>
-        ::-webkit-scrollbar {
-            width: 8px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #f1f5f9; 
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #cbd5e1; 
-            border-radius: 4px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #94a3b8; 
-        }
+        ::-webkit-scrollbar { width: 8px; }
+        ::-webkit-scrollbar-track { background: #f1f5f9; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: #94a3b8; }
     </style>
 </head>
 <body class="bg-white">
@@ -33,6 +24,8 @@
     <script type="text/babel">
         const { useState } = React;
 
+        // --- Icon Components ---
+        // Keeping icons in case they are needed for future sections
         const Terminal = ({ size = 24, className }) => (
             <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><polyline points="4 17 10 11 4 5"></polyline><line x1="12" y1="19" x2="20" y2="19"></line></svg>
         );
@@ -41,9 +34,6 @@
         );
         const BarChart3 = ({ size = 24, className }) => (
             <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M3 3v18h18"/><path d="M18 17V9"/><path d="M13 17V5"/><path d="M8 17v-3"/></svg>
-        );
-        const Github = ({ size = 24, className }) => (
-            <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
         );
         const FileJson = ({ size = 24, className }) => (
             <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><path d="M10 12a1 1 0 0 0-1 1v1a1 1 0 0 1-1 1 1 1 0 0 1 1 1v1a1 1 0 0 0 1 1"/><path d="M14 18a1 1 0 0 0 1-1v-1a1 1 0 0 1 1-1 1 1 0 0 1-1-1v-1a1 1 0 0 0-1-1"/></svg>
@@ -57,20 +47,21 @@
         const Leaf = ({ size = 24, className }) => (
             <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 6.5-2 11a8.7 8.7 0 0 1-3.2 6.1c-1 .8-2 1-3.2.9z"/><path d="M11 20v-9"/></svg>
         );
-        
+        const ArrowUpRight = ({ size = 24, className }) => (
+            <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+        );
+        const Building = ({ size = 24, className }) => (
+            <svg width={size} height={size} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className={className}><rect x="4" y="2" width="16" height="20" rx="2" ry="2"></rect><line x1="9" y1="22" x2="9" y2="22.01"></line><line x1="15" y1="22" x2="15" y2="22.01"></line><line x1="12" y1="22" x2="12" y2="22.01"></line><line x1="12" y1="18" x2="12" y2="18.01"></line><line x1="12" y1="14" x2="12" y2="14.01"></line><line x1="12" y1="10" x2="12" y2="10.01"></line><line x1="12" y1="6" x2="12" y2="6.01"></line><line x1="16" y1="18" x2="16" y2="18.01"></line><line x1="16" y1="14" x2="16" y2="14.01"></line><line x1="16" y1="10" x2="16" y2="10.01"></line><line x1="16" y1="6" x2="16" y2="6.01"></line><line x1="8" y1="18" x2="8" y2="18.01"></line><line x1="8" y1="14" x2="8" y2="14.01"></line><line x1="8" y1="10" x2="8" y2="10.01"></line><line x1="8" y1="6" x2="8" y2="6.01"></line></svg>
+        );
+
         const MediumIcon = ({ size = 20, className }) => (
           <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
             <path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zM20.96 12c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z" />
           </svg>
         );
 
-        const VocusIcon = ({ size = 20, className }) => (
-          <svg width={size} height={size} viewBox="0 0 24 24" fill="currentColor" className={className} xmlns="http://www.w3.org/2000/svg">
-            <rect x="3" y="3" width="8" height="8" rx="1" />
-            <rect x="13" y="3" width="8" height="8" rx="1" />
-            <rect x="13" y="13" width="8" height="8" rx="1" />
-            <rect x="3" y="13" width="8" height="8" rx="1" />
-          </svg>
+        const VocusText = ({ className }) => (
+          <span className={`${className} font-bold tracking-wide`} style={{fontSize: '0.9rem', lineHeight: '1'}}>方格子 vocus</span>
         );
 
         const Portfolio = () => {
@@ -79,280 +70,103 @@
 
           const content = {
             zh: {
-              nav: {
-                projects: "專案作品",
-                about: "關於",
-                vocus: "方格子",
-                medium: "Medium",
-                langSwitch: "EN"
-              },
-              hero: {
-                status: "開放技術諮詢與專案合作",
-                titlePrefix: "將碳數據轉化為",
-                titleHighlight: "決策參考",
-                desc: <React.Fragment>任職於環境技術顧問機構，負責組織與產品層級之碳管理實務。<br/>透過 <span className="font-semibold text-slate-800">數據分析</span> 與 <span className="font-semibold text-slate-800">AI 技術</span> 將複雜的排放邏輯轉化為企業決策參考。</React.Fragment>
-              },
-              portfolio: {
-                title: "技術作品集",
-                tabAll: "全部",
-                tabAi: "AI 實驗",
-                loadingTitle: "更多內容加載中...",
-                loadingDesc: "持續將實務專案轉化為技術文檔中"
-              },
-              cta: {
-                title: "綠領實務與職涯隨筆",
-                desc: "方格子記錄環境顧問的實務觀點與職涯思考；Medium 解析碳數據與永續金融的價值連結。",
-                button: "前往 Charlotte 的碳索地圖"
-              },
+              nav: { articles: "精選文章", vocus: "方格子", medium: "Medium", langSwitch: "EN" },
+              hero: { status: "開放技術諮詢與專案合作", titlePrefix: "將碳數據轉化為", titleHighlight: "決策參考", desc: <React.Fragment>任職於環境技術顧問機構，負責組織與產品層級之碳管理實務。<br/>透過 <span className="font-semibold text-slate-800">數據分析</span> 與 <span className="font-semibold text-slate-800">AI 技術</span> 將複雜的排放邏輯轉化為企業決策參考。</React.Fragment> },
+              articles: { title: "精選文章", subtitle: "從實務心得至金融趨勢", readMore: "閱讀全文" },
+              cta: { title: "綠領實務與職涯隨筆", desc: "方格子記錄環境顧問的實務觀點與職涯思考；Medium 解析碳數據與永續金融的價值連結。", button: "前往 Charlotte 的碳索地圖" },
               footer: "© 2026 Charlotte's Carbon Map. All rights reserved."
             },
             en: {
-              nav: {
-                projects: "Projects",
-                about: "About",
-                vocus: "Vocus Salon",
-                medium: "Medium Finance",
-                langSwitch: "中"
-              },
-              hero: {
-                status: "Available for Consultancy & Collaboration",
-                titlePrefix: "Converting Carbon Data into",
-                titleHighlight: "Decisions",
-                desc: <React.Fragment>Environmental Consultant specializing in organizational & product-level carbon management.<br/>Leveraging <span className="font-semibold text-slate-800">Data Analytics</span> and <span className="font-semibold text-slate-800">AI Tech</span> to transform complex emission logic into actionable business insights.</React.Fragment>
-              },
-              portfolio: {
-                title: "Technical Portfolio",
-                tabAll: "All",
-                tabAi: "AI Experiments",
-                loadingTitle: "More Loading...",
-                loadingDesc: "Converting practical projects into technical documentation."
-              },
-              cta: {
-                title: "Green Collar Practices & Career Insights",
-                desc: "I share environmental consultancy insights and career thoughts on Vocus, and analyze the value link between carbon data and sustainable finance on Medium.",
-                button: "Visit Vocus Salon"
-              },
+              nav: { articles: "Articles", vocus: "Vocus Salon", medium: "Medium Finance", langSwitch: "中" },
+              hero: { status: "Available for Consultancy & Collaboration", titlePrefix: "Converting Carbon Data into", titleHighlight: "Decisions", desc: <React.Fragment>Environmental Consultant specializing in organizational & product-level carbon management.<br/>Leveraging <span className="font-semibold text-slate-800">Data Analytics</span> and <span className="font-semibold text-slate-800">AI Tech</span> to transform complex emission logic into actionable business insights.</React.Fragment> },
+              articles: { title: "Featured Insights", subtitle: "Practical Consultancy & Sustainable Finance", readMore: "Read Article" },
+              cta: { title: "Green Collar Practices & Career Insights", desc: "I share environmental consultancy insights and career thoughts on Vocus, and analyze the value link between carbon data and sustainable finance on Medium.", button: "Visit Vocus Salon" },
               footer: "© 2026 Charlotte's Carbon Map. All rights reserved."
             }
           };
 
-          const projectsData = [
-            {
-              id: 1,
-              category: "Python / Excel",
-              icon: <Terminal size={20} />,
-              tags: ["Python", "Pandas", "Automation", "ISO 14064"],
-              zh: {
-                title: "ISO 14064-1 自動化盤查模組",
-                description: "透過 Python Pandas 處理原始活動數據，自動對應 EPA 係數表，解決人工複製貼上的高出錯率問題。包含異常值檢測 (Outlier Detection) 功能。"
-              },
-              en: {
-                title: "ISO 14064-1 GHG Automation Module",
-                description: "Utilized Python Pandas to process raw activity data and automatically map EPA emission factors, eliminating manual errors. Includes Outlier Detection features."
-              }
-            },
-            {
-              id: 2,
-              category: "AI / LLM",
-              icon: <Brain size={20} />,
-              tags: ["OpenAI API", "LangChain", "Vector DB", "Legal Tech"],
-              zh: {
-                title: "RAG 架構：環保法規查證機器人",
-                description: "利用 Retrieval-Augmented Generation 技術，建立針對台灣環保法規與 ISO 條文的本地知識庫，協助專案人員快速檢索合規性要求。"
-              },
-              en: {
-                title: "RAG: Environmental Regulation Bot",
-                description: "Built a Retrieval-Augmented Generation system with a local knowledge base of Taiwan's EPA regulations and ISO standards for rapid compliance checking."
-              }
-            },
-            {
-              id: 3,
-              category: "Data Viz",
-              icon: <BarChart3 size={20} />,
-              tags: ["D3.js", "Tableau", "LCA", "ISO 14067"],
-              zh: {
-                title: "產品碳足跡 (CFP) 熱點視覺化",
-                description: "針對 ISO 14067 專案開發的視覺化儀表板。將生命週期 (LCA) 各階段碳排佔比以互動式桑基圖 (Sankey Diagram) 呈現，協助客戶識別減碳熱點。"
-              },
-              en: {
-                title: "CFP Hotspot Visualization Dashboard",
-                description: "Interactive dashboard for ISO 14067 projects. Visualizes Life Cycle Assessment (LCA) stages using Sankey Diagrams to identify carbon reduction hotspots."
-              }
-            }
+          // Projects data has been removed as requested.
+
+          const articlesData = [
+            { id: 3, platform: "vocus", date: "2026.01.08", tags: ["新北低碳", "數據治理", "政策分析"], url: "https://vocus.cc/article/695e3772fd897800014fd958", zh: { title: "115年新北低碳標章認證：新增「社區公設用電檢核表」", excerpt: "新北市環保局最新公告解析。今年新增的「表二」為何是勝負關鍵？落實社區數據合規的應對策略。" }, en: { title: "Policy Analysis: Data Compliance in 2026 NTC Low Carbon Label", excerpt: "Why the new 'Table 2' is critical for certification. How to handle data governance challenges for community energy." } },
+            { id: 4, platform: "medium", date: "2026.01.10", tags: ["Energy Efficiency", "Data Analysis", "EUI"], url: "https://medium.com", zh: { title: "優化社區 EUI：以數據驅動的低碳標章申請策略", excerpt: "解析「表二、社區公設用電檢核表」背後的能耗邏輯。如何透過數據邊界界定，精準提升低碳社區評分。" }, en: { title: "Optimizing Community EUI: A Data-Driven Approach", excerpt: "Decoding the logic behind 'Table 2'. How to define data boundaries to improve low-carbon scoring." } },
+            { id: 1, platform: "vocus", date: "2026.01.05", tags: ["職涯", "顧問業"], url: "https://vocus.cc", zh: { title: "環境顧問業的實戰觀察：ISO 證照在實務上到底有沒有用？", excerpt: "考了一堆證照，進了公司才發現現場狀況百出？本文分享從新手到 A1 專案人員的真實適應過程與專業觀點。" }, en: { title: "Insights from an Environmental Consultant: Are ISO Certs Actually Useful in Practice?", excerpt: "Collected certifications but struggled on site? Sharing my professional journey and adaptation from a rookie to an A1 project lead." } },
+            { id: 2, platform: "medium", date: "2026.02.12", tags: ["永續金融", "ESG"], url: "https://medium.com", zh: { title: "碳數據如何驅動綠色融資：從銀行授信視角看 ISO 14064 報告書", excerpt: "銀行看的不是你的係數多精準，而是數據的可驗證性。解析金融機構眼中的碳盤查報告重點。" }, en: { title: "How Carbon Data Drives Green Financing: ISO 14064 from a Bank's Perspective", excerpt: "Banks care less about precision and more about verifiability. Analyzing key focus points of GHG reports for financial institutions." } }
           ];
 
           const t = content[lang];
+          const TechBadge = ({ label }) => ( <span className="px-2 py-1 text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-md mr-2 mb-2">{label}</span> );
 
-          const TechBadge = ({ label }) => (
-            <span className="px-2 py-1 text-xs font-mono text-emerald-700 bg-emerald-50 border border-emerald-100 rounded-md mr-2 mb-2">
-              {label}
-            </span>
-          );
+          const ArticleCard = ({ article }) => {
+            const isVocus = article.platform === 'vocus';
+            const platformColor = isVocus ? 'text-emerald-600' : 'text-slate-800';
+            return (
+              <a href={article.url} target="_blank" rel="noreferrer" className="block group bg-white border border-slate-200 rounded-xl p-6 hover:border-emerald-500/50 hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300">
+                <div className="flex items-center justify-between mb-4 text-xs font-mono text-slate-500">
+                  <div className={`flex items-center gap-2 ${platformColor}`}>
+                    {isVocus ? <VocusText /> : <React.Fragment><MediumIcon size={16} /><span>Medium</span></React.Fragment>}
+                  </div>
+                  <span>{article.date}</span>
+                </div>
+                <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors line-clamp-2">{article[lang].title}</h3>
+                <p className="text-slate-600 text-sm leading-relaxed mb-6 line-clamp-2">{article[lang].excerpt}</p>
+                <div className="flex items-center justify-between pt-4 border-t border-slate-100">
+                  <div className="flex gap-2">{article.tags.map((tag, i) => ( <span key={i} className="text-xs text-slate-500 bg-slate-50 px-2 py-1 rounded">#{tag}</span> ))}</div>
+                  <div className="flex items-center gap-1 text-sm font-medium text-emerald-600 group-hover:translate-x-1 transition-transform">{t.articles.readMore}<ArrowUpRight size={16} /></div>
+                </div>
+              </a>
+            );
+          };
 
           return (
             <div className="min-h-screen bg-white text-slate-800 font-sans selection:bg-emerald-100 selection:text-emerald-900">
-              
               <nav className="fixed top-0 w-full bg-white/90 backdrop-blur-sm border-b border-slate-100 z-50">
                 <div className="max-w-5xl mx-auto px-6 h-16 flex items-center justify-between">
                   <div className="flex items-center gap-2">
-                    <div className="w-5 h-5 bg-emerald-600 rounded-sm flex items-center justify-center">
-                      <span className="text-white text-xs font-bold">C</span>
-                    </div>
-                    <span className="font-semibold tracking-tight text-slate-900 hidden sm:inline">Charlotte's Carbon Map</span>
-                    <span className="font-semibold tracking-tight text-slate-900 sm:hidden">Charlotte's Map</span>
+                    <div className="w-5 h-5 bg-emerald-600 rounded-sm flex items-center justify-center"><span className="text-white text-xs font-bold">C</span></div>
+                    <span className="font-semibold tracking-tight text-slate-900">Charlotte's Carbon Map</span>
                   </div>
-                  
-                  <div className="flex items-center gap-4 md:gap-6 text-sm font-medium">
-                    <a href="#" className="hidden md:block text-slate-500 hover:text-emerald-600 transition-colors">{t.nav.projects}</a>
-                    
+                  <div className="flex items-center gap-4 text-sm font-medium">
+                    {/* Projects link removed */}
+                    <a href="#articles" className="hidden md:block text-slate-500 hover:text-emerald-600">{t.nav.articles}</a>
                     <div className="flex items-center gap-3 border-l border-slate-200 pl-4">
-                      <a href="https://vocus.cc/salon/charlotte_esg" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-slate-500 hover:text-emerald-600 transition-colors" title="Vocus">
-                        <VocusIcon size={16} />
-                        <span className="hidden lg:inline">{t.nav.vocus}</span>
-                      </a>
-                      <a href="https://medium.com/@charlotte_esg" target="_blank" rel="noreferrer" className="flex items-center gap-1 text-slate-500 hover:text-slate-900 transition-colors" title="Medium">
-                        <MediumIcon size={16} />
-                        <span className="hidden lg:inline">{t.nav.medium}</span>
-                      </a>
+                      <a href="https://vocus.cc" target="_blank" className="flex items-center gap-1 text-slate-500 hover:text-emerald-600"><VocusText /></a>
+                      <a href="https://medium.com" target="_blank" className="flex items-center gap-1 text-slate-500 hover:text-slate-900"><MediumIcon size={16} /></a>
                     </div>
-
-                    <button 
-                      onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')}
-                      className="flex items-center gap-1 px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-slate-600 transition-colors text-xs font-bold"
-                    >
-                      <Globe size={14} />
-                      {t.nav.langSwitch}
-                    </button>
+                    <button onClick={() => setLang(lang === 'zh' ? 'en' : 'zh')} className="px-2 py-1 rounded bg-slate-100 hover:bg-slate-200 text-xs font-bold"><Globe size={14} className="inline mr-1"/>{t.nav.langSwitch}</button>
                   </div>
                 </div>
               </nav>
-
               <header className="pt-32 pb-20 px-6 max-w-5xl mx-auto border-b border-slate-100">
-                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-mono text-slate-500 mb-6">
-                  <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
-                  {t.hero.status}
-                </div>
-                
-                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-                  {t.hero.titlePrefix} <br />
-                  <span className="text-emerald-600 decoration-emerald-200 underline decoration-2 underline-offset-4">{t.hero.titleHighlight}</span>.
-                </h1>
-                
-                <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mb-8">
-                  {t.hero.desc}
-                </p>
-
-                <div className="flex flex-wrap gap-3">
-                  <TechBadge label="ISO 14064-1" />
-                  <TechBadge label="ISO 14067" />
-                  <TechBadge label="Python" />
-                  <TechBadge label="RAG / LLM" />
-                  <TechBadge label="LCA Analysis" />
-                </div>
+                <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-slate-50 border border-slate-200 text-xs font-mono text-slate-500 mb-6"><span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>{t.hero.status}</div>
+                <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">{t.hero.titlePrefix} <br /><span className="text-emerald-600 underline decoration-2 underline-offset-4">{t.hero.titleHighlight}</span>.</h1>
+                <p className="text-lg md:text-xl text-slate-600 leading-relaxed max-w-2xl mb-8">{t.hero.desc}</p>
+                <div className="flex flex-wrap gap-3"><TechBadge label="ISO 14064-1" /><TechBadge label="ISO 14067" /><TechBadge label="Python" /><TechBadge label="RAG / LLM" /><TechBadge label="LCA Analysis" /></div>
               </header>
-
               <main className="max-w-5xl mx-auto px-6 py-16">
                 
-                <div className="flex items-center justify-between mb-12">
-                  <h2 className="text-2xl font-bold flex items-center gap-2">
-                    <FileJson size={24} className="text-emerald-600" />
-                    {t.portfolio.title}
-                  </h2>
-                  <div className="flex gap-2 text-sm bg-slate-50 p-1 rounded-lg border border-slate-200">
-                    <button 
-                      onClick={() => setActiveTab('all')}
-                      className={`px-3 py-1 rounded-md transition-all ${activeTab === 'all' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-700'}`}
-                    >
-                      {t.portfolio.tabAll}
-                    </button>
-                    <button 
-                      onClick={() => setActiveTab('ai')}
-                      className={`px-3 py-1 rounded-md transition-all ${activeTab === 'ai' ? 'bg-white shadow-sm text-slate-900' : 'text-slate-500 hover:text-slate-700'}`}
-                    >
-                      {t.portfolio.tabAi}
-                    </button>
-                  </div>
-                </div>
+                {/* Projects Section Removed */}
 
-                <div className="grid md:grid-cols-2 gap-6">
-                  {projectsData.map((project) => (
-                    <div key={project.id} className="group border border-slate-200 rounded-xl p-6 hover:border-emerald-500/50 hover:shadow-lg hover:shadow-emerald-500/5 transition-all duration-300 bg-white">
-                      <div className="flex justify-between items-start mb-4">
-                        <div className="p-3 bg-slate-50 rounded-lg text-emerald-600 group-hover:bg-emerald-50 transition-colors">
-                          {project.icon}
-                        </div>
-                        <Github size={18} className="text-slate-300 hover:text-slate-600 cursor-pointer" />
-                      </div>
-                      
-                      <div className="text-xs font-mono text-emerald-600 mb-2">{project.category}</div>
-                      <h3 className="text-lg font-bold text-slate-900 mb-3 group-hover:text-emerald-700 transition-colors">
-                        {project[lang].title}
-                      </h3>
-                      <p className="text-slate-600 text-sm leading-relaxed mb-6">
-                        {project[lang].description}
-                      </p>
-                      
-                      <div className="flex flex-wrap gap-2 pt-4 border-t border-slate-100">
-                        {project.tags.map((tag, i) => (
-                          <span key={i} className="text-xs text-slate-500 bg-slate-50 px-2 py-1 rounded">
-                            #{tag}
-                          </span>
-                        ))}
-                      </div>
-                    </div>
-                  ))}
-
-                  <div className="border border-dashed border-slate-300 rounded-xl p-6 flex flex-col items-center justify-center text-center bg-slate-50/50">
-                    <Cpu size={32} className="text-slate-300 mb-4" />
-                    <h3 className="text-lg font-semibold text-slate-400 mb-2">{t.portfolio.loadingTitle}</h3>
-                    <p className="text-slate-400 text-sm">
-                      {t.portfolio.loadingDesc}
-                    </p>
-                  </div>
-                </div>
-
-                <section className="mt-24 bg-slate-900 text-white rounded-2xl p-8 md:p-12 relative overflow-hidden">
-                  <div className="relative z-10 flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                    <div>
-                      <h3 className="text-2xl font-bold mb-2">{t.cta.title}</h3>
-                      <p className="text-slate-400 max-w-lg">
-                        {t.cta.desc}
-                      </p>
-                    </div>
+                <section id="articles" className="mb-24">
+                   <div className="flex items-center gap-4 mb-12"><div className="h-px bg-slate-200 flex-1"></div><h2 className="text-xl font-bold text-slate-800">{t.articles.title}</h2><div className="h-px bg-slate-200 flex-1"></div></div>
+                   <div className="grid md:grid-cols-2 gap-6">{articlesData.map(a => ( <ArticleCard key={a.id} article={a} /> ))}</div>
+                </section>
+                <section className="bg-slate-900 text-white rounded-2xl p-8 md:p-12 relative overflow-hidden">
+                  <div className="relative z-10">
+                    <h3 className="text-2xl font-bold mb-2">{t.cta.title}</h3>
+                    <p className="text-slate-400 max-w-lg mb-6">{t.cta.desc}</p>
                     <div className="flex gap-4">
-                      <a 
-                        href="https://vocus.cc/salon/charlotte_esg" 
-                        target="_blank" 
-                        rel="noreferrer"
-                        className="px-6 py-3 bg-emerald-500 hover:bg-emerald-400 text-white font-medium rounded-lg transition-colors flex items-center gap-2 group"
-                      >
-                        <VocusIcon size={18} />
-                        <span className="hidden sm:inline">Vocus</span>
-                      </a>
-                      <a 
-                        href="https://medium.com/@charlotte_esg" 
-                        target="_blank" 
-                        rel="noreferrer"
-                        className="px-6 py-3 bg-slate-700 hover:bg-slate-600 text-white font-medium rounded-lg transition-colors flex items-center gap-2 group"
-                      >
-                        <MediumIcon size={18} />
-                        <span className="hidden sm:inline">Medium</span>
-                      </a>
+                      <a href="https://vocus.cc" target="_blank" className="px-6 py-3 bg-emerald-500 rounded-lg flex items-center gap-2"><VocusText /></a>
+                      <a href="https://medium.com" target="_blank" className="px-6 py-3 bg-slate-700 rounded-lg flex items-center gap-2"><MediumIcon size={18} /><span>Medium</span></a>
                     </div>
                   </div>
-                  
                   <Leaf size={200} className="absolute -right-10 -bottom-10 text-slate-800 opacity-20 rotate-12" />
                 </section>
-
               </main>
-
-              <footer className="border-t border-slate-100 py-12 text-center text-slate-400 text-sm">
-                <p>{t.footer}</p>
-              </footer>
+              <footer className="border-t border-slate-100 py-12 text-center text-slate-400 text-sm"><p>{t.footer}</p></footer>
             </div>
           );
         };
-
         const root = ReactDOM.createRoot(document.getElementById('root'));
         root.render(<Portfolio />);
     </script>
