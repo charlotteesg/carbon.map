@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="robots" content="noindex,nofollow">
     <title>永續淨零全方位家教流程</title>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
         body {
-            background-color: #f0fdfa; /* 極淺的薄荷綠背景，清爽感 */
+            background-color: #f0fdfa; /* 極淺的薄荷綠背景 */
             font-family: 'Noto Sans TC', sans-serif;
             display: flex;
             justify-content: center;
@@ -41,7 +40,7 @@
             color: #57a09a; /* 中綠色 */
             font-size: 15px;
             margin-top: 0;
-            margin-bottom: 50px;
+            margin-bottom: 25px; /* 標題下方的留白 */
             font-weight: 500;
         }
 
@@ -136,13 +135,15 @@
         <h1>永續淨零實戰家教</h1>
         <p class="subtitle">客製化學習路徑：證照考試 ➔ 實務盤查 ➔ 職涯接軌</p>
 
-        <svg viewBox="0 0 700 700">
+        <!-- 縮減 SVG 高度，從 780 改為 620，剛好包住 Step 5 -->
+        <svg viewBox="0 0 700 620">
             
             <!-- 中央軸線 -->
-            <line x1="80" y1="60" x2="80" y2="620" class="timeline-line" />
+            <!-- 縮短軸線長度，從 y2=620 改為 y2=600 -->
+            <line x1="80" y1="30" x2="80" y2="600" class="timeline-line" />
 
             <!-- ================= STEP 1 ================= -->
-            <g transform="translate(0, 40)">
+            <g transform="translate(0, 10)">
                 <circle cx="80" cy="45" r="22" class="num-circle" style="fill: #94a3b8;" />
                 <text x="80" y="45" class="num-text">1</text>
                 
@@ -157,7 +158,7 @@
             </g>
 
             <!-- ================= STEP 2 ================= -->
-            <g transform="translate(0, 160)">
+            <g transform="translate(0, 130)">
                 <circle cx="80" cy="45" r="22" class="num-circle" style="fill: #64748b;" />
                 <text x="80" y="45" class="num-text">2</text>
                 
@@ -172,8 +173,7 @@
             </g>
 
             <!-- ================= STEP 3 (核心技能) ================= -->
-            <g transform="translate(0, 280)">
-                <!-- 數字球與卡片使用品牌色 (Teal) -->
+            <g transform="translate(0, 250)">
                 <circle cx="80" cy="50" r="26" class="num-circle" style="fill: #0d9488; stroke: #ccfbf1; stroke-width: 4;" />
                 <text x="80" y="50" class="num-text">3</text>
                 
@@ -189,7 +189,7 @@
             </g>
 
             <!-- ================= STEP 4 ================= -->
-            <g transform="translate(0, 410)">
+            <g transform="translate(0, 380)">
                 <circle cx="80" cy="45" r="22" class="num-circle" style="fill: #64748b;" />
                 <text x="80" y="45" class="num-text">4</text>
                 
@@ -204,7 +204,7 @@
             </g>
 
             <!-- ================= STEP 5 ================= -->
-            <g transform="translate(0, 530)">
+            <g transform="translate(0, 500)">
                 <circle cx="80" cy="45" r="22" class="num-circle" style="fill: #94a3b8;" />
                 <text x="80" y="45" class="num-text">5</text>
                 
@@ -218,8 +218,7 @@
                 </g>
             </g>
 
-            <!-- 底部裝飾 -->
-            <text x="350" y="680" text-anchor="middle" font-size="13" fill="#94a3b8" letter-spacing="1">Designed for ESG Career & Skills</text>
+            <!-- 已移除底部 CTA 與裝飾文字 -->
 
         </svg>
     </div>
