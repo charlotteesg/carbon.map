@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>永續淨零全方位家教流程</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f0fdfa; /* 極淺的薄荷綠背景，清爽感 */
+            font-family: 'Noto Sans TC', sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 40px 20px;
+            margin: 0;
+        }
+
+        .paper-sheet {
+            background: white;
+            width: 100%;
+            max-width: 800px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+            border-radius: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccfbf1;
+        }
+
+        h1 {
+            font-size: 28px;
+            color: #0f766e; /* 深綠色 */
+            text-align: center;
+            margin-bottom: 8px;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+        }
+
+        p.subtitle {
+            text-align: center;
+            color: #57a09a; /* 中綠色 */
+            font-size: 15px;
+            margin-top: 0;
+            margin-bottom: 50px;
+            font-weight: 500;
+        }
+
+        svg {
+            width: 100%;
+            height: auto;
+            display: block;
+            overflow: visible;
+        }
+
+        /* SVG 樣式定義 */
+        
+        /* 1. 連接線 */
+        .timeline-line { 
+            stroke: #cbd5e1; 
+            stroke-width: 3; 
+            fill: none; 
+            stroke-linecap: round;
+        }
+
+        /* 2. 卡片背景 */
+        .card-bg { 
+            fill: white; 
+            stroke: #e2e8f0; 
+            stroke-width: 2; 
+            rx: 12; 
+            filter: drop-shadow(0px 2px 4px rgba(0,0,0,0.03));
+        }
+
+        /* 重點卡片 (Step 3) 特別樣式 */
+        .card-bg-highlight {
+            fill: #f0fdfa; /* 淺綠底 */
+            stroke: #0d9488; /* 亮綠框 */
+            stroke-width: 2;
+            rx: 12;
+            filter: drop-shadow(0px 4px 8px rgba(13, 148, 136, 0.15));
+        }
+
+        /* 3. 數字圓圈 */
+        .num-circle { 
+            fill: #64748b; 
+        }
+        .num-text { 
+            fill: white; 
+            font-size: 18px; 
+            font-weight: 700; 
+            text-anchor: middle; 
+            dominant-baseline: central; 
+        }
+
+        /* 4. 文字排版 */
+        .step-title { 
+            font-size: 18px; 
+            font-weight: 700; 
+            fill: #1e293b; 
+        }
+        .step-desc { 
+            font-size: 14px; 
+            fill: #64748b; 
+        }
+
+        /* 5. 標籤 (Tag) */
+        .tag-bg { 
+            fill: #f1f5f9; 
+            rx: 4;
+        }
+        .tag-text { 
+            font-size: 12px; 
+            fill: #475569; 
+            font-weight: 500; 
+            text-anchor: middle; 
+            dominant-baseline: central; 
+        }
+        
+        /* 亮點標籤 */
+        .tag-highlight-bg {
+            fill: #ccfbf1;
+        }
+        .tag-highlight-text {
+            fill: #0f766e;
+            font-weight: 700;
+            font-size: 12px; 
+            text-anchor: middle; 
+            dominant-baseline: central; 
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="paper-sheet">
+        <h1>永續淨零實戰家教</h1>
+        <p class="subtitle">客製化學習路徑：證照考試 ➔ 實務盤查 ➔ 職涯接軌</p>
+
+        <svg viewBox="0 0 700 700">
+            
+            <!-- 中央軸線 -->
+            <line x1="80" y1="60" x2="80" y2="620" class="timeline-line" />
+
+            <!-- ================= STEP 1 ================= -->
+            <g transform="translate(0, 40)">
+                <circle cx="80" cy="45" r="22" class="num-circle" style="fill: #94a3b8;" />
+                <text x="80" y="45" class="num-text">1</text>
+                
+                <g transform="translate(130, 0)">
+                    <rect x="0" y="0" width="450" height="90" class="card-bg" />
+                    <text x="25" y="35" class="step-title">學習目標診斷</text>
+                    <text x="25" y="65" class="step-desc">鎖定需求：ISO考證 / 轉職面試 / 企業盤查實戰</text>
+
+                    <rect x="350" y="30" width="80" height="30" class="tag-bg" />
+                    <text x="390" y="46" class="tag-text">客製規劃</text>
+                </g>
+            </g>
+
+            <!-- ================= STEP 2 ================= -->
+            <g transform="translate(0, 160)">
+                <circle cx="80" cy="45" r="22" class="num-circle" style="fill: #64748b;" />
+                <text x="80" y="45" class="num-text">2</text>
+                
+                <g transform="translate(130, 0)">
+                    <rect x="0" y="0" width="450" height="90" class="card-bg" />
+                    <text x="25" y="35" class="step-title">永續核心知識圖譜</text>
+                    <text x="25" y="65" class="step-desc">整合 ISO 標準、GRI 準則與 CBAM 國際趨勢解析</text>
+                    
+                    <rect x="350" y="30" width="80" height="30" class="tag-bg" />
+                    <text x="390" y="46" class="tag-text">觀念打底</text>
+                </g>
+            </g>
+
+            <!-- ================= STEP 3 (核心技能) ================= -->
+            <g transform="translate(0, 280)">
+                <!-- 數字球與卡片使用品牌色 (Teal) -->
+                <circle cx="80" cy="50" r="26" class="num-circle" style="fill: #0d9488; stroke: #ccfbf1; stroke-width: 4;" />
+                <text x="80" y="50" class="num-text">3</text>
+                
+                <g transform="translate(130, 0)">
+                    <rect x="0" y="0" width="450" height="100" class="card-bg-highlight" />
+                    
+                    <text x="25" y="38" class="step-title" style="fill: #115e59;">碳管理數據實戰</text>
+                    <text x="25" y="70" class="step-desc" style="fill: #334155;">排放係數選用、Excel/AI 工具應用、計算除錯</text>
+                    
+                    <rect x="350" y="35" width="80" height="30" class="tag-highlight-bg" />
+                    <text x="390" y="51" class="tag-highlight-text">必修技能</text>
+                </g>
+            </g>
+
+            <!-- ================= STEP 4 ================= -->
+            <g transform="translate(0, 410)">
+                <circle cx="80" cy="45" r="22" class="num-circle" style="fill: #64748b;" />
+                <text x="80" y="45" class="num-text">4</text>
+                
+                <g transform="translate(130, 0)">
+                    <rect x="0" y="0" width="450" height="90" class="card-bg" />
+                    <text x="25" y="35" class="step-title">報告撰寫與查證模擬</text>
+                    <text x="25" y="65" class="step-desc">永續報告書架構、模擬外部稽核攻防與缺失改善</text>
+                    
+                    <rect x="350" y="30" width="80" height="30" class="tag-bg" />
+                    <text x="390" y="46" class="tag-text">實務視角</text>
+                </g>
+            </g>
+
+            <!-- ================= STEP 5 ================= -->
+            <g transform="translate(0, 530)">
+                <circle cx="80" cy="45" r="22" class="num-circle" style="fill: #94a3b8;" />
+                <text x="80" y="45" class="num-text">5</text>
+                
+                <g transform="translate(130, 0)">
+                    <rect x="0" y="0" width="450" height="90" class="card-bg" />
+                    <text x="25" y="35" class="step-title">成果驗收與衝刺</text>
+                    <text x="25" y="65" class="step-desc">證照考前總複習 OR 求職履歷/作品集優化指導</text>
+                    
+                    <rect x="350" y="30" width="80" height="30" class="tag-bg" />
+                    <text x="390" y="46" class="tag-text">目標達成</text>
+                </g>
+            </g>
+
+            <!-- 底部裝飾 -->
+            <text x="350" y="680" text-anchor="middle" font-size="13" fill="#94a3b8" letter-spacing="1">Designed for ESG Career & Skills</text>
+
+        </svg>
+    </div>
+
+</body>
+</html>
